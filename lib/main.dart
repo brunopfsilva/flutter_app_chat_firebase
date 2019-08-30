@@ -24,18 +24,22 @@ void main() async {
 
 
   //lista em tempo real os dados
-  /*
-  Firestore.instance.collection("teste").snapshots().listen((snapshot){
+
+ /* Firestore.instance.collection("teste").snapshots().listen((snapshot){
 
 
     for(DocumentSnapshot doc in snapshot.documents){
       print(doc.data);
     }
 
+    if(snapshot.documents.length.toInt() >3){
+
+    }
+
+
 
   });
-
-  */
+*/
 
   runApp(MaterialApp(home: MyHomePage()));
 
