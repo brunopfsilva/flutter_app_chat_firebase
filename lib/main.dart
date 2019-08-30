@@ -41,6 +41,52 @@ void main() async {
   });
 */
 
-  runApp(MaterialApp(home: MyHomePage()));
+
+ runApp(myHome());
+
 
 }
+
+class myHome extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+
+   final ThemeData KIOstheme = ThemeData(
+    primarySwatch: Colors.orange,
+    primaryColor: Colors.grey[100],
+    primaryColorBrightness: Brightness.light,
+   );
+
+   final ThemeData Defaultheme = ThemeData(
+    primarySwatch: Colors.purple,
+    accentColor: Colors.orange[400],
+   );
+
+
+    return MaterialApp(
+     title: "Chat App",
+     debugShowCheckedModeBanner: false,
+     theme: Theme.of(context).platform == TargetPlatform.iOS ?
+     KIOstheme : Defaultheme,
+     home: ChatScreen(),
+    );
+  }
+
+
+
+}
+
+
+class ChatScreen extends StatefulWidget {
+  @override
+  _ChatScreenState createState() => _ChatScreenState();
+}
+
+class _ChatScreenState extends State<ChatScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Container();
+  }
+}
+
