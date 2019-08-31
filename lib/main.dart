@@ -86,7 +86,19 @@ class ChatScreen extends StatefulWidget {
 class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SafeArea(
+      bottom: true,
+      top: false,
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text("Chat Area"),
+          centerTitle: true,
+          elevation: Theme.of(context).platform == TargetPlatform.iOS ? 0 : 4.0,
+        ),
+        body: Column(),
+      ),
+
+    );
   }
 }
 
